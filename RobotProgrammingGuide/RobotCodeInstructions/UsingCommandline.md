@@ -6,9 +6,9 @@ Starting in the 2019 season, there’s been a stronger need to use the command l
 
 (Note that the first few steps are different on macOS/Linux—please search for instructions specific to your OS. On Linux/Unix, you are looking for a Bash/shell window; on macOS, you are looking for Terminal.)
 
-Press the Start button (or the Windows key on your keyboard), type `cmd`, and open Command Prompt. This opens Command Prompt (cmd) scoped to your user home directory (typically `C:\\Users\\username\\`).
+Press the Start button (or the Windows key on your keyboard), type `cmd`, and open Command Prompt. This opens Command Prompt (cmd) scoped to your user home directory (typically `C:/Users/username/`).
 
-You’ll need to navigate around to do anything useful. To list the contents of your current directory, type `dir` (`ls` on macOS/Linux). To navigate to another directory, use the change directory command (`cd`) like `cd directory`. With this command, `..` references the directory above your current location, and `.` references the current directory. You can also use a full path, such as `cd C:\\Users\\username\\git\\`, to navigate directly.
+You’ll need to navigate around to do anything useful. To list the contents of your current directory, type `dir` (`ls` on macOS/Linux). To navigate to another directory, use the change directory command (`cd`) like `cd directory`. With this command, `..` references the directory above your current location, and `.` references the current directory. You can also use a full path, such as `cd C:/Users/username/git/`, to navigate directly.
 
 ## Simple Git operations in Command Prompt
 

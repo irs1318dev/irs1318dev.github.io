@@ -1,6 +1,6 @@
 # Updating ButtonMap
 
-After adding a new operation, open the `ButtonMap.java` file (under `core_robot\\src\\main\\java\\frc\\robot\\driver`) and add a mapping into the schema that corresponds to the type of operation being added (analog, digital, macro). Remember that analog operations represent things that are done to a certain extent, using double (decimal) values typically between -1.0 and 1.0. Digital operations represent things that are either done or not done, using boolean values (true or false). Each type of operation, analog or digital, has its own corresponding type of `OperationDescription`.
+After adding a new operation, open the `ButtonMap.java` file (under `core_robot/src/main/java/frc/robot/driver`) and add a mapping into the schema that corresponds to the type of operation being added (analog, digital, macro). Remember that analog operations represent things that are done to a certain extent, using double (decimal) values typically between -1.0 and 1.0. Digital operations represent things that are either done or not done, using boolean values (true or false). Each type of operation, analog or digital, has its own corresponding type of `OperationDescription`.
 
 ## Adding Analog Operation Descriptions
 
