@@ -1,0 +1,249 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+:root {
+  --team-purple: #662382;
+  --team-gold: #f9b234;
+  --purple-dark: #4a1a5e;
+  --purple-light: #8b3fb0;
+  --gold-light: #ffc85c;
+  --gold-dark: #e09a1a;
+}
+
+@import url('https://fonts.cdnfonts.com/css/itc-avant-garde-gothic-pro');
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'ITC Avant Garde Gothic Pro', 'Avant Garde', 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif;
+  font-weight: 700;
+  color: var(--team-purple);
+}
+
+header {
+  background: linear-gradient(135deg, var(--team-purple) 0%, var(--purple-dark) 100%);
+  border-bottom: 4px solid var(--team-gold);
+  padding: 35px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-family: 'ITC Avant Garde Gothic Pro', 'Avant Garde', 'Century Gothic', sans-serif;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin: 0;
+  padding: 0;
+}
+
+header p {
+  color: var(--team-gold);
+  font-size: 18px;
+  font-weight: 500;
+  margin: 10px 0 0 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+a {
+  color: var(--team-purple);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--purple-light);
+  text-decoration: underline;
+}
+
+section h1,
+section h2 {
+  border-bottom: 3px solid var(--team-gold);
+  padding-bottom: 10px;
+  margin-top: 30px;
+}
+
+section h3 {
+  color: var(--purple-dark);
+  border-left: 4px solid var(--team-gold);
+  padding-left: 15px;
+  margin-top: 25px;
+}
+
+pre {
+  background: #f8f8f8;
+  border: 1px solid #e0e0e0;
+  border-left: 4px solid var(--team-purple);
+  border-radius: 4px;
+  padding: 15px;
+  overflow-x: auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+code {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+  background: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 3px;
+  color: var(--purple-dark);
+  font-size: 0.9em;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+blockquote {
+  border-left: 4px solid var(--team-gold);
+  background: #fafafa;
+  padding: 15px 20px;
+  margin: 20px 0;
+  font-style: italic;
+  color: #555;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+table th {
+  background: var(--team-purple);
+  color: white;
+  font-family: 'ITC Avant Garde Gothic Pro', 'Avant Garde', sans-serif;
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: 700;
+}
+
+table td {
+  padding: 10px 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+table tr:hover {
+  background: #f5f5f5;
+}
+
+table tr:nth-child(even) {
+  background: #fafafa;
+}
+
+footer {
+  background: var(--team-purple);
+  color: var(--team-gold);
+  padding: 20px 0;
+  text-align: center;
+  border-top: 4px solid var(--team-gold);
+  margin-top: 50px;
+}
+
+footer p {
+  margin: 0;
+  font-weight: 500;
+}
+
+footer a {
+  color: var(--team-gold);
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--gold-light);
+  text-decoration: none;
+}
+
+.btn,
+button,
+input[type="submit"],
+input[type="button"] {
+  background: var(--team-gold);
+  color: var(--team-purple);
+  font-family: 'ITC Avant Garde Gothic Pro', 'Avant Garde', sans-serif;
+  font-weight: 700;
+  padding: 10px 20px;
+  border: 2px solid var(--team-purple);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover {
+  background: var(--team-purple);
+  color: var(--team-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+ul li::marker {
+  color: var(--team-gold);
+}
+
+ol li::marker {
+  color: var(--team-purple);
+  font-weight: bold;
+}
+
+hr {
+  border: none;
+  border-top: 2px solid var(--team-gold);
+  margin: 30px 0;
+}
+
+::selection {
+  background: var(--team-purple);
+  color: white;
+}
+
+::-moz-selection {
+  background: var(--team-purple);
+  color: white;
+}
+
+.wrapper {
+  box-shadow: 0 0 20px rgba(102, 35, 130, 0.1);
+}
+
+section {
+  padding: 30px;
+}
+
+@media print, screen and (max-width: 720px) {
+  header h1 {
+    font-size: 32px;
+  }
+  
+  header p {
+    font-size: 16px;
+  }
+  
+  section {
+    padding: 20px;
+  }
+}
+
+img {
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
