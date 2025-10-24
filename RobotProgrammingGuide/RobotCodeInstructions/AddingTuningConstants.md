@@ -3,7 +3,7 @@
 To add a new constant that holds a "magic value" that can be updated to adjust how the robot behaves, first open the `TuningConstants` class (TuningConstants.java under `core_robot\src\main\java\frc\robot`) and add a new constant value. We try to keep the various constants organized, so we list them in a different section for each mechanism. Each constant is of the form:
 
 ```java
-    public static final Type NAME_YELLING_SNAKE_CASE = value;
+public static final Type NAME_YELLING_SNAKE_CASE = value;
 ```
 
 The type depends on what is being tracked, usually an `int`, `double`, or `boolean`.

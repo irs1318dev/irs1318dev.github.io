@@ -3,7 +3,7 @@
 To add a new key for logging purposes, first open the `LoggingKey` enum (LoggingKey.java) and add a new value to the list in that file. We try to keep the various logging keys organized by mechanism, so please keep them sorted in a sensible order. Each logging key is of the form below, with a given name, and with the first parameter being the name displayed in the dashboard, the second being the type, and the third being whether it is an input from a sensor (true) or not (false):
 
 ```java
-    Name("value", LoggingType.String, false),
+Name("value", LoggingType.String, false),
 ```
 
 The name is of the form `MechanismComponentState`, where the first part is the name of the mechanism (e.g., `Intake` or `DriveTrain`), the second part (if relevant) is the component within that mechanism that is affected (e.g., `Arm`), and the last part is the state being logged (e.g., `IsExtended` or `LeftDistance`). The name uses PascalCase, where multiple words are included and separated by capitalizing the first letter of each word.
@@ -13,5 +13,5 @@ The value is of the form `m/state`, where the first part is an abbreviation for 
 Put together, an entry for a differential (tank) drivetrain’s left distance would look like:
 
 ```java
-    DriveTrainLeftDistance("dt/leftDistance", LoggingType.Number, true),
+DriveTrainLeftDistance("dt/leftDistance", LoggingType.Number, true),
 ```

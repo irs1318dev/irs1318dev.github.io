@@ -5,12 +5,12 @@ After adding a new operation, open the `ButtonMap.java` file (under `core_robot/
 ## Adding Analog Operation Descriptions
 
 ```java
-    new AnalogOperationDescription(
-        AnalogOperation.DriveTrainTurn,
-        UserInputDevice.Driver,
-        AnalogAxis.XBONE_RSX,
-        ElectronicsConstants.INVERT_XBONE_RIGHT_X_AXIS,
-        TuningConstants.DRIVETRAIN_X_DEAD_ZONE),
+new AnalogOperationDescription(
+    AnalogOperation.DriveTrainTurn,
+    UserInputDevice.Driver,
+    AnalogAxis.XBONE_RSX,
+    ElectronicsConstants.INVERT_XBONE_RIGHT_X_AXIS,
+    TuningConstants.DRIVETRAIN_X_DEAD_ZONE),
 ```
 
 The analog description takes parameters describing the user input device (driver or co-driver controller) and the axis of the joystick (X, Y, throttle, etc.). Different controller types support different axes and use different enumeration values, so make sure to select one that makes sense and is consistent for your controller type. The description also includes the ability to invert the axis (so that pressing the joystick in a certain direction matches its positive/negative value) and to provide a dead zone (as joysticks are often imperfect at measuring the middle, so it can be useful to ignore a certain range around the center).
@@ -18,11 +18,11 @@ The analog description takes parameters describing the user input device (driver
 ## Adding Digital Operation Descriptions
 
 ```java
-    new DigitalOperationDescription(
-        DigitalOperation.IntakeIn,
-        UserInputDevice.Codriver,
-        UserInputDeviceButton.XBONE_A_BUTTON,
-        ButtonType.Simple),
+new DigitalOperationDescription(
+    DigitalOperation.IntakeIn,
+    UserInputDevice.Codriver,
+    UserInputDeviceButton.XBONE_A_BUTTON,
+    ButtonType.Simple),
 ```
 
 The digital description takes arguments describing the user input device, the button on the controller (or certain alternatives), and the type of button (Simple, Toggle, or Click). Simple buttons are typically used for continuous actions (such as running an intake). Toggle actions are typically used for macros. Click actions are typically used for single-shot actions (such as extending an arm) or changing state (enable mode or disable mode). Some alternatives to using a button on the controller include a POV direction or an `AnalogAxis` with a range of triggering values.
@@ -30,10 +30,10 @@ The digital description takes arguments describing the user input device, the bu
 ## Adding Shifts
 
 ```java
-    new ShiftDescription(
-        Shift.DriverDebug,
-        UserInputDevice.Driver,
-        UserInputDeviceButton.XBONE_SELECT_BUTTON),
+new ShiftDescription(
+    Shift.DriverDebug,
+    UserInputDevice.Driver,
+    UserInputDeviceButton.XBONE_SELECT_BUTTON),
 ```
 
 A shift description takes arguments describing the user input device and the button on the joystick (or certain alternatives). Whenever that button is pressed, the shift is active, and it is inactive when released. Some alternatives to using a button on the controller include a POV direction or an `AnalogAxis` with a range of triggering values.

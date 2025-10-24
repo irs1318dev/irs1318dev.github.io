@@ -3,7 +3,7 @@
 To add a new constant that describes how the robot is wired/configured electronically, first open the `ElectronicsConstants` class (ElectronicsConstants.java under `core_robot\src\main\java\frc\robot`) and add a new constant value. We try to keep the various constants organized, so we list them in a different section for each mechanism. Each constant is of the form:
 
 ```java
-    public static final Type NAME_YELLING_SNAKE_CASE = value;
+public static final Type NAME_YELLING_SNAKE_CASE = value;
 ```
 
 The type is almost always an integer `int` for electronics constants, representing the port where something is plugged in or an ID that has been assigned to the component. The type may depend on the interface being used.
