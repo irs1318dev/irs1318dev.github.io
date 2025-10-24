@@ -1,8 +1,9 @@
 # General Robot Design
 
-Robots in FRC tend to have a small set of different pieces that we want to utilize, that can be arranged in a large number of ways to make complex mechanisms.  These mechanisms are typically designed before the code for them is written, so you should know what they are composed of by the time you are writing any code.  We'll list out a few of these pieces here and explain what they do and how we typically use them.
+Robots in FRC tend to have a small set of components we want to use, which can be arranged in many ways to make complex mechanisms. These mechanisms are typically designed before the code for them is written, so you should know what they’re composed of by the time you write any code. We’ll list a few of these components here and explain what they do and how we typically use them.
 
-## Table of Contents:
+## Table of Contents
+
 1. [RoboRIO](RoboRIO.md)
 2. [Actuators](Actuators.md)
     1. [Motors](Motors.md)

@@ -1,8 +1,12 @@
 # Overview
 
-> "Everything should be made as simple as possible, but not simpler." - Albert Einstein
+> "Everything should be made as simple as possible, but not simpler." — Albert Einstein
 
-The Issaquah Robotics Society’s Robot code is designed to be a good example of a moderately large software project that students of varying levels of experience with programming can contribute to. It is aimed at making the programming of the robot easy, so that it can respond well to changes to the physical robot as well as changes in the way that we wish to control the robot. It achieves this by encapsulating each part in a different area of the code, with the idea that there should be very little duplication of code to ease maintainability.
+The Issaquah Robotics Society’s robot code is designed to be a solid example of a moderately large software project that students with varying levels of programming experience can contribute to.
+
+It aims to make programming the robot straightforward so the software can adapt well to changes in the physical robot and to how we want to control it.
+
+It achieves this by encapsulating each concern in a distinct area of the code, minimizing duplication to ease maintenance.
 
 # [General Robot Design](GeneralRobotDesign/GeneralRobotDesign.md)
 
@@ -25,20 +29,20 @@ The Issaquah Robotics Society’s Robot code is designed to be a good example of
 
 # [Robot Code Instructions](RobotCodeInstructions/RobotCodeInstructions.md)
 
-1. [Setting up your Environment](RobotCodeInstructions/SettingUpYourEnvironment)
-2. [Using Command Line operations](RobotCodeInstructions/UsingCommandline.md)
+1. [Setting Up Your Environment](RobotCodeInstructions/SettingUpYourEnvironment.md)
+2. [Using Command Line Operations](RobotCodeInstructions/UsingCommandline.md)
 3. [Using Git](RobotCodeInstructions/UsingGit.md)
 4. [Adding Operations](RobotCodeInstructions/AddingOperations.md)
 5. [Adding Electronics Constants](RobotCodeInstructions/AddingElectronicsConstants.md)
 6. [Adding Hardware Constants](RobotCodeInstructions/AddingHardwareConstants.md)
 7. [Adding Tuning Constants](RobotCodeInstructions/AddingTuningConstants.md)
-8. [Adding Logging Key](RobotCodeInstructions/AddingLoggingKeys.md)
-9. [Writing a new Mechanism](RobotCodeInstructions/WritingMechanisms.md)
+8. [Adding Logging Keys](RobotCodeInstructions/AddingLoggingKeys.md)
+9. [Writing a New Mechanism](RobotCodeInstructions/WritingMechanisms.md)
 10. [Adding Macros](RobotCodeInstructions/AddingMacros.md)
 11. [Adding Autonomous Routines](RobotCodeInstructions/AddingAutonomousRoutines.md)
-12. [Composing Tasks together](RobotCodeInstructions/ComposingTasksTogether.md)
+12. [Composing Tasks Together](RobotCodeInstructions/ComposingTasksTogether.md)
 13. [Updating ButtonMap](RobotCodeInstructions/UpdatingButtonMap.md)
-14. [Writing Tasks](RobotCodeInstructions/WritingControlTasks.md)
+14. [Writing Control Tasks](RobotCodeInstructions/WritingControlTasks.md)
 
 # [Advanced Topics](AdvancedTopics/AdvancedTopics.md)
 

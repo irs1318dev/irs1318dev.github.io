@@ -26,7 +26,19 @@
       </header>
       <section>
 
+      {% if page.url != "/" %}
+      <nav class="back-nav" role="navigation" aria-label="Back">
+        <a class="back-link" href="javascript:history.back()" aria-label="Go back to previous page">← Back</a>
+      </nav>
+      {% endif %}
+
       {{ content }}
+
+      {% if page.url != "/" %}
+      <nav class="back-bottom back-nav" role="navigation" aria-label="Back">
+        <a class="back-link" href="javascript:history.back()" aria-label="Go back to previous page">← Back</a>
+      </nav>
+      {% endif %}
 
       </section>
     </div>

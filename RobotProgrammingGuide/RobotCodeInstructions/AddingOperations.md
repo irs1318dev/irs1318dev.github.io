@@ -1,11 +1,11 @@
 # Adding Operations
 
-To add a new action that the robot can take with a mechanism, first open the ```AnalogOperation``` or ```DigitalOperation``` enum (AnalogOperation.java or DigitalOperation.java under core_robot\src\main\java\frc\robot\driver) and add a new value to the list in that file.  We try to keep the various operations organized, so we keep them listed in a different section for each Mechanism.
+To add a new action that the robot can take with a mechanism, first open the `AnalogOperation` or `DigitalOperation` enum (AnalogOperation.java or DigitalOperation.java under `core_robot\src\main\java\frc\robot\driver`) and add a new value to the list in that file. We try to keep the various operations organized, so we list them in a different section for each mechanism.
 
-Digital operations are things that are done all-or-nothing, as a true or false value (type ```boolean```).
+Digital operations are all-or-nothing, expressed as a true or false value (type `boolean`).
 
-Analog operations are things that are done to some extent, as a decimal number (type ```double```, a double-precision floating point number).
+Analog operations are done to some extent, expressed as a decimal number (type `double`, a double-precision floating-point number).
 
-The operation should be named starting with the mechanism (e.g. "DriveTrain", "Intake", etc.), and then a description of the action (e.g. "Turn", "RaiseArm", etc.) to make one single pascal-case value (e.g. "DriveTrainTurn", "IntakeRaiseArm", etc.).
+The operation should be named starting with the mechanism (e.g., "DriveTrain", "Intake", etc.), followed by a description of the action (e.g., "Turn", "RaiseArm", etc.) to make a single PascalCase value (e.g., "DriveTrainTurn", "IntakeRaiseArm").
 
-Remember that Analog/Digital Operations are a single, simple thing that is done by the robot.  Any more complex action that we want the robot to take will be a Macro which composes these Analog/Digital Operations together.
+Remember that analog/digital operations represent single, simple actions performed by the robot. Any more complex action we want the robot to take will be a macro that composes these operations together.

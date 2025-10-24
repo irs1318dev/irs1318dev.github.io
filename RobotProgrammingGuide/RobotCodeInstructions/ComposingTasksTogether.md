@@ -1,9 +1,10 @@
-# Composing Tasks together
+# Composing Tasks Together
 
-Tasks can be grouped together in interesting ways to describe more complex tasks.  By having tasks happen in a certain order and sometimes simultaneously, you can end up with a complex task built out of much simpler re-usable tasks.  To do this, you can utilize SequentialTask and ConcurrentTask, and ConditionalTasl-based tasks.
+Tasks can be grouped in interesting ways to describe more complex behavior. By having tasks happen in a certain order and sometimes simultaneously, you can build a complex task out of simpler, reusable tasks. To do this, you can use `SequentialTask`, `ConcurrentTask`, and `ConditionalTask`-based tasks.
 
 ## SequentialTask.Sequence()
-Sequential task starts and completes each task in the order they are listed.
+
+`SequentialTask` starts and completes each task in the order they are listed.
 
 ```java
 SequentialTask.Sequence(
@@ -11,10 +12,11 @@ SequentialTask.Sequence(
   new DriveForwardTask(3.5));
 ```
 
-The example above is a sequence of two tasks, where it will first wait 3 seconds and then will drive 3.5 inches forward.
+The example above is a sequence of two tasks: first wait 3 seconds, then drive 3.5 inches forward.
 
 ## ConcurrentTask.AnyTasks()
-Concurrent AnyTasks starts all of the tasks at the same time and completes them all when one of them has considered itself to be completed.
+
+`ConcurrentTask.AnyTasks` starts all tasks at the same time and completes when any one of them has completed.
 
 ```java
 ConcurrentTask.AnyTasks(
@@ -22,10 +24,11 @@ ConcurrentTask.AnyTasks(
   new DriveForwardTask(3.5));
 ```
 
-The example above is a pair of two tasks that will execute at the same time, completing when either 3 seconds has elapsed OR once the robot has driven 3.5 inches forward.
+The example above runs two tasks at the same time, completing when either 3 seconds have elapsed OR the robot has driven 3.5 inches forward.
 
 ## ConcurrentTask.AllTasks()
-Concurrent AllTasks starts all of the tasks at the same time and completes when all of them have considered themselves to be completed.
+
+`ConcurrentTask.AllTasks` starts all tasks at the same time and completes when all of them have completed.
 
 ```java
 ConcurrentTask.AllTasks(
@@ -33,7 +36,8 @@ ConcurrentTask.AllTasks(
   new DriveForwardTask(3.5));
 ```
 
-The example above is a pair of two tasks that will execute at the same time, completing when the task has taken 3 seconds AND the robot has driven 3.5 inches forward.
+The example above runs two tasks at the same time, completing when 3 seconds have elapsed AND the robot has driven 3.5 inches forward.
 
 ## ConditionalTask-based tasks
-Conditional Tasks have the ability to use branching logic based on conditions within our tasks.  These are implemented as classes inheriting from ```ConditionalTask```, which run perform some logic to evaluate a condition like "elevator is above level 3" and based on that decide which action to perform next.  This allows you to create a decision tree based on different conditions to have the macro or autonomous routine be responsive to the current state of the robot or even the state of the world around it.
+
+Conditional tasks can use branching logic based on conditions within our tasks. These are implemented as classes inheriting from `ConditionalTask`, which evaluate a condition (e.g., "elevator is above level 3") and, based on that, decide which action to perform next. This allows you to create a decision tree based on different conditions so the macro or autonomous routine can respond to the current state of the robot or even the world around it.
