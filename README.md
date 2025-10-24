@@ -1,4 +1,4 @@
-# Robot Programming resources
+# Robot Programming Resources
 
 [Robot Programming Guide](RobotProgrammingGuide/)
 
