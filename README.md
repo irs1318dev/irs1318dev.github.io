@@ -1,2 +1,5 @@
 # Robot Programming resources
-[Fauxbot information](https://irs1318dev.github.io/Fauxbot)
+
+[Robot Programming Guide](RobotProgrammingGuide/)
+
+[Fauxbot Exercises](https://irs1318dev.github.io/Fauxbot)

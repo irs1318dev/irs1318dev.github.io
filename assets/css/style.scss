@@ -113,7 +113,7 @@ header ul a strong {
 
 .wrapper {
   background: #ffffff !important;
-  box-shadow: 0 28px 60px -35px rgba(26, 19, 58, 0.45) !important;
+  box-shadow: 0 20px 35px -28px rgba(26, 19, 58, 0.28) !important;
   border-radius: 16px !important;
   border: 1px solid rgba(30, 22, 60, 0.08) !important;
 }
@@ -231,11 +231,11 @@ table tr:last-child td {
 }
 
 footer {
-  background: #ffffff !important;
+  background: transparent !important;
   color: #555268 !important;
   padding: 28px 0 !important;
   text-align: center !important;
-  border-top: 3px solid rgba(102, 35, 130, 0.25) !important;
+  border-top: 0 !important;
   margin-top: 0 !important;
   border-radius: 0 0 16px 16px !important;
   width: 100% !important;
