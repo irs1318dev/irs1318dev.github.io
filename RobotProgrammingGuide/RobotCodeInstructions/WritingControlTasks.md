@@ -12,6 +12,7 @@ public class RaiseElevatorTask extends ControlTaskBase implements IControlTask
   public RaiseElevatorTask()
   {
   }
+}
 ```
 
 At the top of the class, declare any member variables that you need. Some of these may be initialized in the constructor (for example, when your task has parameters like a time duration), whereas others will be initialized in the `begin()` function. Note that the constructor could be called well before the task actually starts, which is why we have the `begin()` function below.
@@ -19,10 +20,10 @@ At the top of the class, declare any member variables that you need. Some of the
 ## Write task begin function
 
 ```java
-  public void begin()
-  {
-    this.elevator = this.getInjector().getInstance(ElevatorMechanism.class);
-  }
+public void begin()
+{
+  this.elevator = this.getInjector().getInstance(ElevatorMechanism.class);
+}
 ```
 
 The `begin()` function is called at the very beginning of the task and can be used to set initial state and retrieve any mechanism that we need to reference. Note that this function is called right before `hasCompleted()` and `update()` are called for the first time.
@@ -30,10 +31,10 @@ The `begin()` function is called at the very beginning of the task and can be us
 ## Write task update function
 
 ```java
-  public void update()
-  {
-    this.setDigitalOperationState(DigitalOperation.ElevatorRaise, true);
-  }
+public void update()
+{
+  this.setDigitalOperationState(DigitalOperation.ElevatorRaise, true);
+}
 ```
 
 The `update()` function is called every ~20 ms and should update the relevant operations.
@@ -41,10 +42,10 @@ The `update()` function is called every ~20 ms and should update the relevant op
 ## Write task end function
 
 ```java
-  public void end()
-  {
-    this.setDigitalOperationState(DigitalOperation.ElevatorRaise, false);
-  }
+public void end()
+{
+  this.setDigitalOperationState(DigitalOperation.ElevatorRaise, false);
+}
 ```
 
 The `end()` function is called when the task has ended. The function resets the operations that were used to their default values and should clear any state that needs to be cleared.
@@ -52,10 +53,10 @@ The `end()` function is called when the task has ended. The function resets the 
 ## Write task hasCompleted function
 
 ```java
-  public boolean hasCompleted()
-  {
-    return this.elevator.isRaised();
-  }
+public boolean hasCompleted()
+{
+  return this.elevator.isRaised();
+}
 ```
 
 The `hasCompleted()` function is called by the `Driver` class to check whether the particular task should complete. Often this is based on either the amount of time that has elapsed since the task began, or it could be based on some sensor condition being met.
@@ -63,10 +64,10 @@ The `hasCompleted()` function is called by the `Driver` class to check whether t
 ## Write task shouldCancel function (optional)
 
 ```java
-  public boolean shouldCancel()
-  {
-    return this.elevator.isBroken();
-  }
+public boolean shouldCancel()
+{
+  return this.elevator.isBroken();
+}
 ```
 
 The `shouldCancel()` function is called by the `Driver` class to check whether the task should be cancelled prematurely. This is used in a few situations, such as when we are unable to perform an action anymore because a precondition is not met.
@@ -74,10 +75,10 @@ The `shouldCancel()` function is called by the `Driver` class to check whether t
 ## Write task stop function (optional)
 
 ```java
-  public void stop()
-  {
-    this.setDigitalOperationState(DigitalOperation.ElevatorRaise, false);
-  }
+public void stop()
+{
+  this.setDigitalOperationState(DigitalOperation.ElevatorRaise, false);
+}
 ```
 
 The `stop()` function is called when the task has been cancelled or interrupted. The function resets the operations that were used to their default values and should clear any state that needs to be cleared. Typically, tasks do the same thing during `stop()` as they do during `end()`, so when that is the case only `end()` needs to be implemented/overridden.
