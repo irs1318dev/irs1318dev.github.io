@@ -20,7 +20,7 @@ $controlSignal = k_P * error + k_I * \int error * dt + k_D * \frac{derror}{dt} +
 ## How can we think of the constants/gains used for PID?
 With PID, the constant values typically need to be discovered experimentally for the P, I, D, and F gains. Typically, F is only used for velocity control. P is used for essentially all PID controllers. I is used to correct error from slight overshoots or undershoots over time. D is used to reduce oscillation around the setpoint.
 
-# Tuning PID
+## Tuning PID
 Typically, we follow a system like the below to tune PID:
 
 1. Determine the typical behavior/ranges of the system (system identification) using direct control (e.g. Percent output). For Positional PID systems, see if there is a certain range of measured values that can be read from the sensor around the expected range for the system. For all systems, but especially Velocity PID systems, try to check the min and max power levels to see the min and max velocities (measured values over time) that can be seen by the sensor.
