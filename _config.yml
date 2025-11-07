@@ -1,3 +1,6 @@
 theme: jekyll-theme-modernist
 title: Issaquah Robotics Society
 description: Programming resources for FIRST Robotics team 1318
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
