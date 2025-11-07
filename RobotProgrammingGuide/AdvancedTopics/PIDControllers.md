@@ -11,11 +11,11 @@ $error = setpoint - measuredValue$
 
 The control signal applied to the motor is calculated based on the error, and how the error changes or accumulates over time.  Essentially, the control signal is based on the sum of a few components: the proportional constant multiplied by the error, the derivative constant multiplied by the rate-of-change of the error, and the integral constant multiplied by the weighted sum of the error over time.
 
-$controlSignal = k_P * error + k_I * \int error * d_t + k_D * d_error/d_t$
+$controlSignal = k_P * error + k_I * \int error * d_t + k_D * d_{error}/d_t$
 
 For some scenarios, we add in an additional term for "feed-forward" control in addition to the "feed-back" control.  The feed-forward term ($k_F$) is typically a constant simply multiplied by the setpoint.  When feed-forward is used, it is called a "PIDF" controller.
 
-$controlSignal = k_P * error + k_I * \int error * d_t + k_D * d_error/d_t + k_F * setpoint$
+$controlSignal = k_P * error + k_I * \int error * d_t + k_D * d_{error}/d_t + k_F * setpoint$
 
 ## How can we think of the constants/gains used for PID?
 With PID, the constant values typically need to be discovered experimentally for the P, I, D, and F gains. Typically, F is only used for velocity control. P is used for essentially all PID controllers. I is used to correct error from slight overshoots or undershoots over time. D is used to reduce oscillation around the setpoint.
